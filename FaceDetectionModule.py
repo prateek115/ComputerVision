@@ -6,7 +6,7 @@ class FaceDetection():
         self.minDetectionConf = minDetectionConf
         self.mpFaceDetection = mp.solutions.face_detection
         self.mpDraw = mp.solutions.drawing_utils
-        self.faceDetection = self.mpFaceDetection.FaceDetection()
+        self.faceDetection = self.mpFaceDetection.FaceDetection(minDetectionConf)
 
     def findFaces(self, img, draw=True):
         imgRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
