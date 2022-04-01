@@ -9,7 +9,7 @@ mylist = os.listdir(folder)
 overlayList = []
 xp,yp = 0,0
 eraser = 80
-imgCanvas = np.zeros((660,1200,3), np.uint8)
+imgCanvas = np.zeros((720,1280,3), np.uint8)
 
 for img in mylist:
     image = cv2.imread(f'{folder}/{img}')
@@ -82,5 +82,4 @@ while True:
     img[0:134,0:1280] = header
     img = cv2.addWeighted(img,0.5,imgCanvas,0.5,0)
     cv2.imshow("Image", img)
-    cv2.imshow("Canvas", imgCanvas)
     cv2.waitKey(1)
